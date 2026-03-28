@@ -5,7 +5,7 @@
     "": {
       "dependencies": {
         "arktype": "2.2.0",
-        "ata-validator": "^0.4.12",
+        "ata-validator": "0.4.12",
         "effect": "3.21.0",
         "stnl": "2.2.2",
         "sury": "11.0.0-alpha.4",

@@ -63,6 +63,10 @@ await Promise.all(
                 logLevel: 'silent',
                 platform: 'node',
                 transform: {
+                  define: {
+                    '__dirname': 'import.meta.dirname',
+                    '__filename': 'import.meta.filename'
+                  },
                   target: 'esnext',
                 },
                 output: {
