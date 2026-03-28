@@ -54,7 +54,7 @@ const BUNDLER_PLUGINS = [
             },
           },
     },
-  })
+  }),
 ];
 
 await Promise.all(
@@ -102,6 +102,7 @@ await Promise.all(
                   await build({
                     input: entry,
                     logLevel: 'silent',
+                    platform: 'node',
                     transform: {
                       target: 'esnext',
                     },

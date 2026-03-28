@@ -3,7 +3,9 @@ import { Schema } from 'effect';
 
 {
   const Id = Schema.Int.pipe(Schema.greaterThanOrEqualTo(0));
-  const DisplayName = Schema.optional(Schema.String.pipe(Schema.minLength(3), Schema.maxLength(24)));
+  const DisplayName = Schema.optional(
+    Schema.String.pipe(Schema.minLength(3), Schema.maxLength(24)),
+  );
 
   const assert = Schema.is(
     Schema.Struct({

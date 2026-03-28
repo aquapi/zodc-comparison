@@ -74,7 +74,7 @@ await Promise.all(
                     mangle: true,
                   },
                 },
-                external: [/^bun:/, 'bun']
+                external: [/^bun:/, 'bun'],
               });
 
               console.log('Built:', fmt.relativePath(casePath), '--->', fmt.relativePath(entry));
