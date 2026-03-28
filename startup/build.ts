@@ -12,7 +12,6 @@ import { scanFiles, tryWriteAsync } from '../lib/fs.ts';
 import { fmt } from '../lib/format.ts';
 import { startupFileContent } from '../lib/output.ts';
 import runtimeName from '../lib/runtime-name.ts';
-import externals from '../lib/bundler/externals.ts';
 
 const BUNDLED_DIR = import.meta.dir + '/.out';
 const SRC_DIR = import.meta.dir + '/src';
@@ -55,8 +54,7 @@ const BUNDLER_PLUGINS = [
             },
           },
     },
-  }),
-  externals,
+  })
 ];
 
 await Promise.all(
@@ -112,6 +110,7 @@ await Promise.all(
                       file: entry,
                       postBanner: '// @bun',
                     },
+                    external: [/^bun:/, 'bun'],
                     plugins: BUNDLER_PLUGINS,
                   });
 

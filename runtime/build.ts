@@ -8,7 +8,6 @@ import { scanFiles, tryWriteAsync } from '../lib/fs.ts';
 import config from './config.ts';
 import { fmt } from '../lib/format.ts';
 import { runtimeFileContent } from '../lib/output.ts';
-import externals from '../lib/bundler/externals.ts';
 
 const BUNDLED_DIR = import.meta.dir + '/.out';
 const SRC_DIR = import.meta.dir + '/src';
@@ -62,6 +61,7 @@ await Promise.all(
               await build({
                 input: entry,
                 logLevel: 'silent',
+                platform: 'node',
                 transform: {
                   target: 'esnext',
                 },
@@ -74,7 +74,7 @@ await Promise.all(
                     mangle: true,
                   },
                 },
-                plugins: [externals],
+                external: [/^bun:/, 'bun']
               });
 
               console.log('Built:', fmt.relativePath(casePath), '--->', fmt.relativePath(entry));
