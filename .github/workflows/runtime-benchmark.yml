@@ -29,8 +29,8 @@ jobs:
 
       - name: Install node-gyp tools
         run: |
-          apt update
-          apt install libre2-dev
+          sudo apt update
+          sudo apt install libre2-dev
 
       - name: Build benchmark files
         run: |
