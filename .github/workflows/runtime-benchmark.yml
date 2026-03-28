@@ -27,6 +27,11 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Install node-gyp tools
+        run: |
+          apt update
+          apt install libre2-dev
+
       - name: Build benchmark files
         run: |
           bun i --production
