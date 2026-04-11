@@ -13,6 +13,8 @@ import { BUNDLE_OPTIONS } from '../lib/build.ts';
 const BUNDLED_DIR = import.meta.dir + '/.out';
 const SRC_DIR = import.meta.dir + '/src';
 
+await Bun.$`cd ${import.meta.dir} && bun i`;
+
 try {
   rmSync(BUNDLED_DIR, { recursive: true });
 } catch {}

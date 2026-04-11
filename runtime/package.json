@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "ata-validator": "^0.8.0"
+  },
+  "trustedDependencies": [
+    "ata-validator"
+  ]
+}
