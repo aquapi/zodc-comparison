@@ -47,7 +47,6 @@ export class MarkdownContent {
     for (let labelIdx = 0; labelIdx < chart.labels.length; labelIdx++) {
       const label = chart.labels[labelIdx];
       out += `\n\n ${labelIdx + 1}. ${label}`;
-
       for (let dsIdx = 0; dsIdx < chart.datasets.length; dsIdx++) {
         const value = chart.datasets[dsIdx].data[labelIdx];
         out += `\n    ${this.SYMBOLS[dsIdx % this.SYMBOLS.length].repeat(Math.floor((value * this.WIDTH) / maxValue) + 1)}  ${+value.toFixed(2)}`;
