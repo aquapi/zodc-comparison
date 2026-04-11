@@ -10,5 +10,5 @@ export const BUNDLE_OPTIONS: BuildOptions = {
     },
     target: 'esnext',
   },
-  external: [/^bun:/, 'bun', 'ata-validator'],
+  external: [/^bun:/, 'bun', 'ata-validator', 'mitata'],
 }
