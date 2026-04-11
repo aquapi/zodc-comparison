@@ -72,7 +72,7 @@ await Promise.all(
 
       try {
         if (existsSync(join(categoryPath, 'package.json'))) {
-          await Bun.$`cd ${categoryPath} && bun i`.quiet();
+          await Bun.$`cd ${categoryPath} && bun i`;
           console.log('Installed dependencies:', fmt.h1(categoryName));
         }
 

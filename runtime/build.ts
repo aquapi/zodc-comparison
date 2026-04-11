@@ -33,7 +33,7 @@ await Promise.all(
       }
 
       try {
-        await Bun.$`cd ${category} && bun i`.quiet();
+        await Bun.$`cd ${category} && bun i`;
         console.log('Installed dependencies:', fmt.h1(categoryName));
 
         await Promise.all(
