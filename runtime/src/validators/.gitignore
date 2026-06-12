@@ -7,4 +7,4 @@
 # Hide typia & zod-compiler compilation results
 /typia/schema.js
 /typia/schema.d.ts
-/zod-compiler/schema.js
+/zod-compiler/schema.ts
