@@ -1,8 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "arktype": "2.2.0",
-    "stnl": "2.2.3",
-    "typebox": "1.1.7"
-  }
-}

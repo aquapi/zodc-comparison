@@ -6,7 +6,9 @@
     "stnl": "2.2.3",
     "sury": "11.0.0-alpha.4",
     "typebox": "1.1.7",
+    "typedriver": "^0.8.13",
     "valibot": "1.3.1",
-    "zod": "4.3.6"
+    "zod": "4.3.6",
+    "zod-compiler": "^1.5.0"
   }
 }

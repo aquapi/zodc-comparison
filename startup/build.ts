@@ -60,7 +60,6 @@ const BUNDLER_PLUGINS = [
 
 await Promise.all(
   scanFiles('**/*/.config.ts', SRC_DIR)
-    .filter((configPath) => !configPath.includes('/node_modules/'))
     .map(async (configPath, categoryIndex) => {
       const categoryPath = dirname(configPath);
       const categoryName = relative(SRC_DIR, categoryPath);

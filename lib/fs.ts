@@ -7,6 +7,7 @@ export const scanFiles = (pat: string, cwd: string) =>
       cwd,
       absolute: true,
       followSymlinks: false,
+      dot: true
     }),
   );
 

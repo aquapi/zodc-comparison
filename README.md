@@ -3,12 +3,6 @@ Benchmark startup time, minified size, gzipped size and runtime.
 ```sh
 # Install all dependencies
 bun i
-
-# Run startup time and sizes benchmark
-./startup.sh
-
-# Run runtime benchmark
-./runtime.sh
 ```
 
 ## Methodology
