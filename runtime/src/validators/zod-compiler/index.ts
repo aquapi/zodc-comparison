@@ -1,11 +1,10 @@
-import assertSimple from './assert-simple.spec.ts';
-import compile from 'typedriver';
+import { compile } from 'zod-compiler';
 import z from 'zod';
 
 const Id = z.int().min(0);
 const DisplayName = z.optional(z.string().min(3).max(24));
 
-const schema = compile(
+export const schema = compile(
   z.object({
     id: Id,
     displayName: DisplayName,
@@ -21,11 +20,3 @@ const schema = compile(
       .max(30),
   })
 );
-
-assertSimple('zod-typedriver (jit, parse)', (o) => {
-  schema.parse(o);
-});
-
-assertSimple('zod-typedriver (jit, assert)', (o) => {
-  if (!schema.check(o)) throw new Error();
-});
